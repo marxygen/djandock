@@ -1,6 +1,12 @@
 # djandock
 
-A Python script to initialize a Django project with a setup virtual environment and docker and PostgreSQL
+A Python package to initialize a Django project with a virtual environment, Docker and Git repository with one command
+
+# Setup
+
+```Shell
+$ pip install djandock
+```
 
 # Usage
 

@@ -1,5 +1,5 @@
 import venv, os
-from presets import VIRTUALENV_DIR, PACKAGE_INSTALL_COMMAND
+from .presets import VIRTUALENV_DIR, PACKAGE_INSTALL_COMMAND
 
 def create_virtual_env(directory, install_libs=True):
     builder = venv.EnvBuilder(with_pip=True, upgrade_deps=True)

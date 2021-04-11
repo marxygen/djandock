@@ -1,10 +1,10 @@
 import argparse, os
 from datetime import datetime as dt
-from misc import create_directory
-from virtenv import create_virtual_env
-from add_git import initialize_repo
-from django_proj import create_django_project
-from docker_files import wrap
+from .misc import create_directory
+from .virtenv import create_virtual_env
+from .add_git import initialize_repo
+from .django_proj import create_django_project
+from .docker_files import wrap
 
 if __name__ != '__main__':
     print('This file is to be executed directly')
@@ -38,6 +38,8 @@ print('\tDjango project created')
 
 wrap(args.name) # Create Dockerfile and docker-compose.yml file
 print('\tWrapped in Docker')
+
+print(f'[{dt.now()}] Finished')
 
 
 

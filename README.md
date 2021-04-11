@@ -5,13 +5,13 @@ A Python package to initialize a Django project with a virtual environment, Dock
 # Setup
 
 ```Shell
-$ pip install djandock
+pip install djandock
 ```
 
 # Usage
 
 ```Shell
-$ python -m djandock [name] -r [Git repo link]
+python -m djandock [name] -r [Git repo link]
 ```
 
 1. Creates a virtual environment

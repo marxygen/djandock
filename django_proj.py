@@ -1,2 +1,2 @@
-def create_django_project():
+def create_django_project(name):
     ...

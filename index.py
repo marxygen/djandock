@@ -1,4 +1,4 @@
-import argparse
+import argparse, os
 from datetime import datetime as dt
 from misc import create_directory
 from virtenv import create_virtual_env
@@ -15,7 +15,12 @@ parser.add_argument('name', type=str, help="Name of your project")
 parser.add_argument('-r', '--repository', type=str, help="Link to the repository")
 args = parser.parse_args()
 
+if os.path.exists(os.path.join(os.getcwd(), args.name)):
+    print(f'\nTarget directory "{os.path.join(os.getcwd(), args.name)}" is not empty. Operation aborted\n')
+    raise SystemExit
+
 print(f'[{dt.now()}] Initializing "{args.name}"...')
+
 create_directory(args.name) # Create directory
 print('\tProject folder created')
 

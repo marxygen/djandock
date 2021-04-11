@@ -11,3 +11,4 @@ $ djandock [name] -r [Git repo link]
 1. Creates a virtual environment
 2. Creates a Django project
 3. Wraps the project in Docker
+4. Initializes the Git repository

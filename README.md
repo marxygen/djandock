@@ -5,7 +5,7 @@ A Python script to initialize a Django project with a setup virtual environment 
 # Usage
 
 ```Shell
-$ djandock [name] -r [Git repo link]
+$ python -m djandock [name] -r [Git repo link]
 ```
 
 1. Creates a virtual environment

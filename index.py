@@ -18,15 +18,21 @@ args = parser.parse_args()
 print(f'[{dt.now()}] Initializing "{args.name}"...')
 create_directory(args.name) # Create directory
 print('\tProject folder created')
+
+if args.repository:
+    initialize_repo(args.name, args.repository) # Initialize the repository and pull it
+    print('\tGit repository initialized')
+else:
+    print('\tSkipping initializing Git - no link provided')
+
 create_virtual_env(args.name) # Create a virtual environment in this directory
 print('\tVirtual environment created')
-create_django_project(args.name)
+
+create_django_project(args.name) # Initialize a Django project 
 print('\tDjango project created')
+
 wrap(args.name) # Create Dockerfile and docker-compose.yml file
 print('\tWrapped in Docker')
-# if args.repository:
-#     initialize_repo(args.repository)
-#     print('Git repository initialized')
 
 
 

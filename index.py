@@ -19,9 +19,8 @@ create_directory(args.name) # Create directory
 print('\tProject folder created')
 create_virtual_env(args.name) # Create a virtual environment in this directory
 print('\tVirtual environment created')
-
-#create_django_project(args.name)
-#print('\tDjango project created')
+create_django_project(args.name)
+print('\tDjango project created')
 
 # if args.repository:
 #     initialize_repo(args.repository)

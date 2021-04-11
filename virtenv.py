@@ -9,13 +9,10 @@ def create_virtual_env(directory, install_libs=True):
         # Attempt to enter the virtual environment and install required scripts there.
         # Might be tricky since Windows and Linux differ in activating the virtualenv
         
-        #code = os.system(PACKAGE_INSTALL_COMMAND.format(name=directory))
-        stream = os.popen(PACKAGE_INSTALL_COMMAND.format(name=directory))
-        output = stream.read()
-        print(output)
-        # if code == 0:
-        #     print('\tDjango installed successfully')
-        #     return
-        # print('\tCouldn\'t install Django. The following steps may fail')
+        code = os.system(PACKAGE_INSTALL_COMMAND.format(name=directory))
+        if code == 0:
+            print('\tDjango installed successfully')
+            return
+        print('\tCouldn\'t install Django. The following steps may fail')
 
     
